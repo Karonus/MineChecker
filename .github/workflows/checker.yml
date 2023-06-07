@@ -2,7 +2,7 @@ name: Run checker
 
 on:
   schedule:
-    - cron: "35 23 * * *"
+    - cron: "* * * * *"
 
 jobs:
   build:
