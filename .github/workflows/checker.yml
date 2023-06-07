@@ -2,7 +2,7 @@ name: Run checker
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "30 2 * * *"
 
 jobs:
   build:
@@ -20,7 +20,7 @@ jobs:
           pip install -r requirements.txt
       - name: execute script
         env:
-          NICKNAMES: ${{ secrets.NICKNAMES }}
+          NICKNAMES: ${{ vars.NICKNAMES }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_CHAT_ID: ${{ vars.TELEGRAM_CHAT_ID }}
         run: python for_ga.py
