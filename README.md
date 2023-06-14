@@ -13,7 +13,7 @@ Scripts:
 - `for_ga.py` - For Github Actions, see [this](.github/workflows/checker.yml)
 
 
-### Run checker on linux machine
+### Run the checker on linux machine
 1. Create a screen
 ```bash
 screen -S mine_checker
